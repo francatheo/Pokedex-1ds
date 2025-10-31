@@ -1,21 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pokédex</title>
-  <link rel="stylesheet" href="./style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-
-  <div class="container">
-    <h1>Pokédex</h1>
-    <ul data-js="pokedex" class="pokedex"></ul>
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="Buscar por nome ou número" />
+    <button id="searchButton">Buscar</button>
+    <select id="typeFilter">
+      <option value="">Todos os tipos</option>
+      <option value="grass">Grama</option>
+      <option value="fire">Fogo</option>
+      <option value="water">Água</option>
+      <option value="electric">Elétrico</option>
+      <option value="psychic">Psíquico</option>
+      <option value="rock">Pedra</option>
+      <option value="ground">Terra</option>
+      <option value="ice">Gelo</option>
+      <option value="dragon">Dragão</option>
+      <option value="ghost">Fantasma</option>
+      <option value="dark">Sombrio</option>
+      <option value="steel">Aço</option>
+      <option value="fairy">Fada</option>
+    </select>
+    <button id="resetButton">Mostrar todos</button>
   </div>
 
-  <script src="./app.js"></script>
-</body>
+  <ul data-js="pokedex" class="pokedex"></ul>
 
+  <div class="pagination">
+    <button id="prevPage">Anterior</button>
+    <span id="pageIndicator">Página 1</span>
+    <button id="nextPage">Próxima</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
 </html>
